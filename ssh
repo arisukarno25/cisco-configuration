@@ -1,0 +1,25 @@
+ssh konsepnya sama dengan telnet namun lebih secure
+command :
+R-1(config)#username ..username_anda password ..password_anda..
+R-1(config)#ip domain-name ..domain_anda.. (misal : latihan.com)
+R-1(config)#crypto key generate rsa
+
+Keterangan :
+- Pada perintah pertama diminta membuat username dan password untuk masuk (login). 
+- Juga domain-name untuk nama domain yang akan digunakan oleh ssh. 
+- Kemudian perintah crypto key generate rsa yaitu untuk menentukan berapa panjang bit yang akan digunakan, disini yaitu 512.
+
+Selanjutnya yaitu mengkonfigurasi akses line vty .
+command :
+R-1(config)#line vty 0 4
+R-1(config-line)#login local
+R-1(config-line)#transport input ssh
+R-1(config-line)#exit
+
+Keterangan :
+- perintah diatas yaitu untuk memberikan akses kepada client berapa device yang dapat terhubung ke router secara bersamaan, yaitu 5 device (0 sampai 4). 
+- Perintah untuk memilih jenis remote yang akan digunakan, yaitu ssh.
+
+SSH client
+command :
+PC> ssh -l admin ..ip_address_server
