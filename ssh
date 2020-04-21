@@ -1,7 +1,8 @@
 ssh konsepnya sama dengan telnet namun lebih secure
 command :
+R-1(config)#hostname ..nama_router..
 R-1(config)#username ..username_anda password ..password_anda..
-R-1(config)#ip domain-name ..domain_anda.. (misal : latihan.com)
+R-1(config)#ip domain-name ..domain_anda.. (misal : latihan.com/arisukarno dll)
 R-1(config)#crypto key generate rsa
 
 Keterangan :
@@ -22,4 +23,4 @@ Keterangan :
 
 SSH client
 command :
-PC> ssh -l admin ..ip_address_server
+PC> ssh -l ..username_anda ..ip_address_server
