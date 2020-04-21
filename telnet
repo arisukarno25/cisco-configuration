@@ -1,0 +1,9 @@
+telnet : konsep dimana kita dapat mengakses server secara virtual tanpa harus berhadapan langsung dengan fisik server.
+command server :
+R1(config)# line vty 0 4
+R1(config-line)# password ...password anda...
+R1(config-line)# exec-timeout 5 0
+R1(config-line)# login
+
+command client :
+telnet ip_address_server
