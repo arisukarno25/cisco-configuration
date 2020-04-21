@@ -24,3 +24,10 @@ Keterangan :
 SSH client
 command :
 PC> ssh -l ..username_anda ..ip_address_server
+
+cek routing :
+show ip route
+cek interface :
+show interface
+cek ssh :
+show ssh
