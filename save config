@@ -1,0 +1,3 @@
+save config router cisco :
+command :
+copy running-config startup-config
