@@ -3,3 +3,6 @@ Router#show running-config
 
 keterangan :
 cek dengan enter sampai habis
+- Gunakan tombol Enter untuk menampilkan per baris
+- Gunakan tombol Space untuk menampilkan per screen
+- Gunakan tombol q untuk exit dari tampilan konfigurasi router
