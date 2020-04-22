@@ -1,0 +1,5 @@
+Buat banner yang memberikan informasi kepada user yang tidak memiliki otorisasi dilarang
+login router.
+
+command :
+R1(config)# banner motd #Unauthorized access prohibited!#
