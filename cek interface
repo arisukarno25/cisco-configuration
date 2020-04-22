@@ -1,2 +1,2 @@
 command :
-Router#show interfaces 
+Router#show ip interface brief
