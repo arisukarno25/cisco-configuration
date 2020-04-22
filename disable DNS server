@@ -1,3 +1,7 @@
+case :
+Router>enb
+Translating "enb"...domain server (255.255.255.255)
+
 Why..?
 Ketika melakukan konfigurasi pada cisco entah itu di switch maupun di router. 
 Secara default fungsi pencarian DNS pada server telah diaktifkan. 
@@ -7,5 +11,3 @@ Oleh karena itu , menonaktifkan IP Domain Lookup ini sangat menguntungkan bagi p
 
 command :
 R1(config)# no ip domain-lookup
-
-cisco sekarang sudah autoo disable DNS server
