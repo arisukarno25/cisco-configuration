@@ -1,0 +1,11 @@
+Why..?
+Ketika melakukan konfigurasi pada cisco entah itu di switch maupun di router. 
+Secara default fungsi pencarian DNS pada server telah diaktifkan. 
+Fungsinya untuk mencari perintah yang diketik kan pada server. 
+Namun kelemahan dari pengaktifan DNS lookup ini menjadikan keterlambatan bagi pengguna, jika perintah yang diketik kan tidak ada. 
+Oleh karena itu , menonaktifkan IP Domain Lookup ini sangat menguntungkan bagi pengguna.
+
+command :
+R1(config)# no ip domain-lookup
+
+cisco sekarang sudah autoo disable DNS server
