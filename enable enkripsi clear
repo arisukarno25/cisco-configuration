@@ -1,0 +1,5 @@
+command :
+R1(config)# service password-encryption
+
+Keterangan :
+digunakan setelah memberikan password line console, privilage atau telnet
