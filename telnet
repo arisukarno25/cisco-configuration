@@ -7,3 +7,7 @@ R1(config-line)# login
 
 command client :
 telnet ip_address_server
+
+keterangan :
+untuk dapat melakukan akses telnet ke server, previlige mode dan user mode
+atau command command enable password atau enable secret harus disetting terlebih dahulu.
