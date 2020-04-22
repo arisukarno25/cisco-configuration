@@ -1,0 +1,8 @@
+Ketika kita mensetting router, maka konfigurasi akan disimpan sementara di file running-
+configuration (RAM).
+oleh karena itu proses menyimpan penting untuk dilakukan agar saat
+router reboot atau shutdown file konfigurasi router masih tetap disimpan di startup-
+configuration (NVRAM).
+
+command :
+R1# copy running-config startup-config
