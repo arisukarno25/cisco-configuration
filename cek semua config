@@ -1,0 +1,5 @@
+cek semua config cisco, command :
+Router#show running-config 
+
+keterangan :
+cek dengan enter sampai habis
