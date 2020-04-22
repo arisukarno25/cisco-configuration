@@ -1,0 +1,2 @@
+command :
+Router#show interfaces 
