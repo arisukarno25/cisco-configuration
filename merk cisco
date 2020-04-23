@@ -1,0 +1,5 @@
+Untuk mengetahui informasi hardware dan software router.
+command :
+R1# show version 
+atau : 
+R1# show interfaces
