@@ -1,4 +1,11 @@
 ssh konsepnya sama dengan telnet namun lebih secure
+
+Langkah mengaktifkan SSH di router:
+1. Setting domain router
+2. Setting username dan password login
+3. Setting transport input ssh di line vty
+4. Generate crypto rsa key 1024
+
 command :
 R-1(config)#hostname ..nama_router..
 R-1(config)#username ..username_anda password ..password_anda..
