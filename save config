@@ -1,3 +1,7 @@
 save config router cisco :
 command :
 R1# copy running-config startup-config
+atau :
+R1# copy run start 
+atau :
+R1# write memory
