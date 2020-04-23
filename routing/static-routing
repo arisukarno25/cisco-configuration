@@ -1,0 +1,12 @@
+Konsep Dasar Routing
+1. Forwarding paket dari satu network ke network lainnya dengan memilih jalur yang terbaik dari routing table
+2. Routing memungkinkan dua network atau lebih dapat berkomunikasi dengan network lainnya
+3. Routing table hanya terdiri dari jalur terbaik untuk masing-masing network destination
+
+Static routing :
+1. Konfigurasi routing dilakukan secara manual
+2. Membutuhkan informasi network destination
+3. Setiap network destination disetting manual
+4. Digunakan oleh organisasi kecil
+5. Memiliki administrative distance 0 atau 1
+
