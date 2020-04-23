@@ -28,6 +28,19 @@ Keterangan :
 - perintah diatas yaitu untuk memberikan akses kepada client berapa device yang dapat terhubung ke router secara bersamaan, yaitu 5 device (0 sampai 4). 
 - Perintah untuk memilih jenis remote yang akan digunakan, yaitu ssh.
 
+contoh :
+R1>enable
+R1#configure terminal
+Enter configuration commands, one per line. End with CNTL/Z.
+R1(config)#ip domain-name NIXTRAIN.com
+R1(config)#username admin secret ciscossh
+R1(config)#line vty 0 4
+R1(config-line)#transport input ssh
+R1(config-line)#login local
+R1(config-line)#exit
+R1(config)#crypto key generate rsa [ENTER]
+setelah itu masukan bit : 1024
+
 SSH client
 command :
 PC> ssh -l ..username_anda ..ip_address_server
