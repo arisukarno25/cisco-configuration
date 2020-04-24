@@ -1,0 +1,29 @@
+
+Konsep :
+- Static default route adalah static route dengan network address destination 0.0.0.0 dan subnet mask 0.0.0.0.
+- Dikenal juga sebagai “quad zero” route.
+- Static default route melakukan identifikasi gateway yang akan digunakan oleh router untuk mengirimkan semua paket IP untuk network destination yang tidak diketahui di routing table, sehingga akan diforward ke route 0.0.0.0/0.
+- Intinya adalah static default route digunakan ketika destination network belum diketahui 
+- Default routing sebenarnya masuk dalam static routing. Biasa digunakan untuk routing ke internet.
+- ada tabel routing, default routing selalu berada paling bawah dan selalu menjadi last preferred (pilihan terakhir).
+
+command :
+R1(config)#ip route 0.0.0.0 0.0.0.0 {next-hop ip address) atau
+R1(config)#ip route 0.0.0.0 0.0.0.0 {exit-interface)
+
+keterangan :
+- setiap interface yang sebelumnya perlu banyak mensetting pada router cukup satu kali yaitu pada next-hop atau exit-inerface nya saja.
+
+contoh hasil :
+Gateway of last resort is 10.10.10.1 to network 0.0.0.0
+...
+...
+C       192.168.1.0/24 is directly connected, GigabitEthernet0/0/0
+L       192.168.1.254/32 is directly connected, GigabitEthernet0/0/0
+S*   0.0.0.0/0 [1/0] via 10.10.10.1
+
+keterangan :
+- Tanda S* menandakan static default route.
+- Setiap network destination yang tidak diketahui dirouting table akan diforward ke 10.10.10.1
+- Perhatikan pada bagian Gateway of last resort yang menyatakan bahwa untuk menuju network 0.0.0.0 gunakan gatewaynya 10.10.10.1
+- sebelum ada static default route gateway of last resort tidak ada : Gateway of last resort is not set
