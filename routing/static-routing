@@ -54,3 +54,14 @@ keterangan :
 - network destination: network tujuan yang tidak terhubung langsung (remotely connected network)
 - next-hop ip address: ip address yang terletak didepan router lokal menuju network destination
 - exit-interface: interface yang ada di router lokal untuk menuju network destination
+
+contoh hasil routing static :
+...
+S 192.168.2.0/24 [1/0] via 12.12.12.2
+R1#
+
+Dari output routing table diatas, dibagi menjadi 4 kolom :
+- Kolom 1 = S : kode static routing, untuk menuju network destination digunakan static routing, atau routing protocol yang aktif di routing table adalah static routing.
+- Kolom 2 = 192.168.2.0/24 : network destination, alamat network destination yang akan dituju oleh router. Network destination tampil di routing table setelah kita mengaktifkan routing protocol.
+- Kolom 3 = [1/0] : 1 menyatakan nilai Administrative Distance (AD), 0 menyatakan nilai metric.
+- Kolom 4 = via 12.12.12.2 : next-hop ip address yang akan digunakan oleh router local untuk memforward paket ke network destination
