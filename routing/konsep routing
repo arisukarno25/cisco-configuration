@@ -1,0 +1,5 @@
+Konsep dasar :
+- Konsep dasar dari routing adalah, router meneruskan paket-paket IP berdasarkan pada IP address tujuan yang ada dalam header IP paket.
+- Routing akan mencocokkan IP address tujuan dengan routing table, jika tidak ada kecocokan entri dalam routing table dan tidak ada default route, maka router tersebut akan membuang paket tersebut.
+
+-> Untuk itu, sangatlah penting untuk mempunyai routing table yang valid. Supaya tabel routing valid, maka perlu bantuan dari network administrator untuk membuatnya.
