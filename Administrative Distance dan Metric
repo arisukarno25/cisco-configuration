@@ -1,0 +1,32 @@
+Contoh kasus table routing pada router :
+...
+S 192.168.2.0/24 [1/0] via 12.12.12.2
+R1#
+
+Keterangan :
+- Pada Kolom 3 = [1/0] : 1 menyatakan nilai Administrative Distance (AD), 0 menyatakan nilai metric.
+
+Penjelasan :
+- Administrative Distance (AD) menyatakan tingkat prioritas routing protocol ketika router menjalankan lebih dari satu routing protocol secara bersamaan.
+- AD dengan nilai terkecil yang akan di pilih oleh router.
+- Misalkan kita mengaktifkan protocol routing dynamic OSPF dan RIP, maka yang akan dipilih oleh router yaitu OSPF karena memiliki nilai AD lebih kecil (110), sedangkan RIP memiliki nilai AD lebih besar (120).
+- Metric menyatakan nilai dari hasil perhitungan routing protocol. Untuk RIP, metric terbaik dinilai dari hop terkecil, sehingga path (jalur) terbaik menurut RIP yaitu route dengan jumlah hop terkecil.
+
+Kesimpulan :
+- AD untuk membandingkan prioritas routing protocol yang satu dengan yang lainnya, sedangkan Metric untuk membandingkan value (nilai perhitungan) di dalam routing protocol tertentu.
+
+Cisco default administrative distances
+1. Conected interface : 0
+2. Static routing : 1
+3. EIGRP summary route : 5
+4. Exsternal BGP : 20
+5. Internal EIGRP : 90
+6. IGRP : 100
+7. OSPF : 110
+8. IS-IS : 115
+9. RIP : 120
+10. EGP : 140
+11. ODR : 160
+12. Eksternal EIGRP : 170
+13. Internal BGP : 200
+14. Unknown : 255
