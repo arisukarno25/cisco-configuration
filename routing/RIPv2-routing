@@ -1,0 +1,13 @@
+RIPv2
+- Open standar protocol (Cisco atau non-Cisco)
+- Classless routing protocol (support default atau sub-networks)
+- Mendukung VLSM
+- Mendukung Autentikasi
+- Menggunakan multicast address 224.0.0.9
+- Administrative distance: 120
+- Metric: hop count (terbaik = yang paling kecil)
+- Hop ke-16 unreachable
+- Load balancing 4 equal path
+- Digunakan untuk organisasi kecil
+- Update secara periodic dan pertukaran keseleruhan informasi routing tabel setiap 30 second
+
