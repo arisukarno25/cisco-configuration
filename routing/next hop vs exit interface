@@ -1,0 +1,16 @@
+Next Hop vs Exit Interface pada Static Routing
+
+Next Hop :
+- Pada next hop dapat mencegah terjadinya error dalam meneruskan paket ke router tujuan apabila router yang akan meneruskan paket memiliki link yang terhubung dengan banyak router. Itu disebabkan karena router telah mengetahui next hop, yaitu IP Address router tujuan
+- Kekurangannya static routing yang menggunakan next hop akan mengalami multiple lookup atau lookup yg berulang. lookup yg pertama yang akan dilakukan adalah mencari network tujuan,setelah itu akan kembali melakukan proses lookup untuk mencari interface mana yang digunakan untuk menjangkau next hopnya.
+
+Exit interface :
+- Pada exit inerface proses lookup hanya akan terjadi satu kali saja ( single lookup ) karena router akan langsung meneruskan paket ke network tujuan melalui interface yang sesuai pada routing table.
+- Kekurangannya Kemungkinan akan terjadi eror ketika meneruskan paket. jika link router terhubung dengan banyak router, maka router tidak bisa memutuskan router mana tujuanya karena tidak adanya next hop pada tabel routing. karena itulah, akan terjadi eror.
+
+Kesimpulan :
+- next hop cocok digunakan untuk jaringan multi-access network atau point to multipoint.
+- exit interface cocok untuk jaringan point to point.
+
+TIP :
+- Recursive route lookup adalah proses yang terjadi pada routing tabel untuk menentukan exit interface mana yang akan digunakan ketika akan meneruskan paket ke tujuannya.
