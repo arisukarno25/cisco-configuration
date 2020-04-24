@@ -27,3 +27,9 @@ keterangan :
 - Setiap network destination yang tidak diketahui dirouting table akan diforward ke 10.10.10.1
 - Perhatikan pada bagian Gateway of last resort yang menyatakan bahwa untuk menuju network 0.0.0.0 gunakan gatewaynya 10.10.10.1
 - sebelum ada static default route gateway of last resort tidak ada : Gateway of last resort is not set
+
+TIP 
+- static default route cocok untuk network tipe stub-network.
+- Analogi yang tepat mengenai stub network adalah pulau yang hanya mempunyai satu jembatan yang menghubungkan pulau tersebut dengan daratan utama.
+- Tidak ada transportasi laut ataupun udara, artinya tidak ada lagi jalur lain menuju router/tempat tersebut selain jalur satu-satu nya tersebut
+- Dalam kondisi tersebut lah sangat lah cocok diterapkan static default route.
