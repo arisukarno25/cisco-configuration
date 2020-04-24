@@ -3,6 +3,8 @@ Konfigurasi IP Loopback Router :
 - Interface loopback secara default tidak ada, fungsi interface loopback ini seperti logical interface untuk merepresentasikan sebuah subnet. 
 - Manfaat lain interface loopback untuk testing. Jika memiliki keterbatasan resources untuk membuat LAN saat ngelab, gunakan interface loopback sebagai LAN. 
 - Interface loopback sudah UP secara otomatis, sehingga tidak perlu memberikan sub-command no shutdown.
+- interface loopback sendiri adalah interface logikal, artinya interface ini secara nyata tidak ada atau virtual. Oleh karena itu, IP loopback sangat penting digunakan dalam router OSPF. 
+- IP loopback di set dengan IP yang tertinggi yaitu dengan subnet mask 255.255.255.255.
 
 command :
 R1>enable
