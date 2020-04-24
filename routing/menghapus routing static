@@ -1,0 +1,5 @@
+command :
+R1(config)#no ip route network_destination subnet_mask_destination ip_next-hop 
+
+keterangan :
+sama dengan membuat routing static tinggal ditambahkan "no"
