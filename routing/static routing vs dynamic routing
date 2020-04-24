@@ -27,6 +27,10 @@ Dynamic Routing
 - Administrator tidak menentukan rute yang harus ditempuh oleh paket-paket tersebut, melainkan hanya menentukan bagaimana cara router mempelajari paket, dan kemudian router mempelajarinya sendiri.
 - Administrator hanya mengenalkan alamat yang terhubung langsung dengan routernya
 
+cara setting dynamic secara umum
+1. Pilih routing protocol
+2. Advertise directly connected network (jaringan yang terhubung langsung dengan router)
+
 Kelebihan 
 - Cocok untuk area besar/luas
 - Router secara otomatis berbagi informasi
