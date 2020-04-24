@@ -1,0 +1,16 @@
+Konfigurasi IP Loopback Router :
+- IP loopback bertujuan atau berfungsi sebagai pengganti ip address ketika terjadi down pada interfaces ataupun kerusakan pada iterfaces, jadi router tetap bisa di PING melalui ip loopback tersebut.
+- Interface loopback secara default tidak ada, fungsi interface loopback ini seperti logical interface untuk merepresentasikan sebuah subnet. 
+- Manfaat lain interface loopback untuk testing. Jika memiliki keterbatasan resources untuk membuat LAN saat ngelab, gunakan interface loopback sebagai LAN. 
+- Interface loopback sudah UP secara otomatis, sehingga tidak perlu memberikan sub-command no shutdown.
+
+command :
+R1>enable
+R1#configure terminal
+R1(config)#interface loopback1
+R1(config-if)#ip address 172.16.1.1 255.255.255.0
+R1(config-if)#
+R1(config-if)#interface loopback2
+R1(config-if)#ip address 172.16.2.2 255.255.255.0
+R1(config-if)#
+R1(config-if)#end
