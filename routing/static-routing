@@ -10,3 +10,47 @@ Static routing :
 4. Digunakan oleh organisasi kecil
 5. Memiliki administrative distance 0 atau 1
 
+cek table route :
+R1#show ip route
+Codes: C - connected, S - static, I - IGRP, R - RIP, M - mobile, B - BGP
+D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area
+N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+E1 - OSPF external type 1, E2 - OSPF external type 2, E - EGP
+i - IS-IS, L1 - IS-IS level-1, L2 - IS-IS level-2, ia - IS-IS inter area
+* - candidate default, U - per-user static route, o - ODR
+P - periodic downloaded static route
+
+Gateway of last resort is not set
+
+12.0.0.0/24 is subnetted, 1 subnets
+C 12.12.12.0 is directly connected, FastEthernet1/0
+172.16.0.0/24 is subnetted, 2 subnets
+C 172.16.1.0 is directly connected, Loopback1
+C 172.16.2.0 is directly connected, Loopback2
+C 192.168.1.0/24 is directly connected, FastEthernet0/0
+R1#
+
+Dari output routing table R1 dapat dilihat :
+- Routing table diatas yang ditampilkan hanya network directly connected (jaringan yang terhubung langsung) ditandai dengan kode C (Connected).
+- Secara default, router tidak mengetahui network yang tidak terhubung langsung dan itulah alasan mengapa Network A dan Network B tidak bisa berkomunikasi.
+- Untuk mengatasi hal tersebut, maka dibutuhkanlah routing protocol dengan berbagai tipe contohnya static routing atau dynamic routing.
+
+Setting static routing di R1
+Untuk mensetting static routing dapat dilakukan dengan dua cara:
+1. Next-hop IP address
+2. Exit-interface
+
+Istilah lain static routing :
+1. Recursive static route = menggunakan next-hop ip address
+2. Directly static route = menggunakan exit-interface
+
+command :
+R1(config)#ip route <network-destination> <subnet-mask network-destination>
+<next-hop ip address>
+R1(config)#ip route <network-destination> <subnet-mask network-destination>
+<exit-interface>
+
+keterangan :
+- network destination: network tujuan yang tidak terhubung langsung (remotely connected network)
+- next-hop ip address: ip address yang terletak didepan router lokal menuju network destination
+- exit-interface: interface yang ada di router lokal untuk menuju network destination
