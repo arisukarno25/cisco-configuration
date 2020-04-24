@@ -1,1 +1,43 @@
-.
+Static routing 
+- Routing static itu merupakan jenis dari routing yang dilakukan oleh admin jaringan untuk mengkonfigurasi informasi secara manual tentang jaringan yang dituju.
+- Ini merupakan routing yang paling sederhana yang dapat dilakukan pada jaringan komputer. Oleh karena itu routing static adalah pilihan tepat untuk membangun sebuah jaringan, terutama untuk jaringan berskala kecil, karena jika diterapkan dalam skala besar tentu network administrator akan kerepotan dalam melakukan routing.
+- Dalam menggunakan routing static, anda harus mengisi setiap entry pada forwarding table di setiap router yang berada di dalam jaringan
+
+Cara kerja routing static
+- Administrator jaringan yang mengkonfigurasi router 
+- Router melakukan routing berdasarkan informasi dalam table routing 
+- Routing statis digunakan untuk melewatkan paket data
+
+Kelebihan routing static 
+- Meringankan kinerja processor router
+- Tidak ada bandwidth yang digunakan untuk pertukaran informasi dari tabel isi routing pada saat pengiriman paket
+- Routing statis lebih aman dibandingkan routing dinamis
+- Routing Statis kebal dari segala usaha hacker untuk men-spoof dengan tujuan membajak traffik
+
+Kekurangan 
+- kerepotan jika dalam skala besar
+- hanya untuk jaringan skala kecil
+- semua dilakukan secara manual
+
+Dynamic Routing
+- Dynamic Route adalah sebuah router yang membuat tabel routing secara otomatis, dengan mendengarkan lalu lintas jaringan dan juga dengan saling berhubungan antara router lainnya.
+- Protokol routing mengatur router-router sehingga dapat berkomunikasi satu dengan yang lain dan saling memberikan informasi routing yang dapat mengubah isi forwarding table, tergantung keadaan jaringannya.
+- Dengan cara ini, router-router mengetahui keadaan jaringan yang terakhir dan mampu meneruskan data ke arah yang benar.
+- Dynamic router mempelajari sendiri Rute yang terbaik yang akan dilaluinya untuk meneruskan paket dari sebuah network ke network lain.
+- Administrator tidak menentukan rute yang harus ditempuh oleh paket-paket tersebut, melainkan hanya menentukan bagaimana cara router mempelajari paket, dan kemudian router mempelajarinya sendiri.
+- Administrator hanya mengenalkan alamat yang terhubung langsung dengan routernya
+
+Kelebihan 
+- Cocok untuk area besar/luas
+- Router secara otomatis berbagi informasi
+- Bila terjadi penambahan suatu network baru tidak perlu semua router dikonfigurasi, hanya router yang berkaitan saja
+- Tidak perlu mengetahui semua alamat network yang ada
+
+Kekurangan 
+- Beban kerja router menjadi lebih berat karena selalu memperbarui IP Table pada setiap waktu tertentu
+- Kecepatan pengenalan dan kelengkapan IP Table terbilang lama karena router membroadcast ke semua router lainnya sampai ada yang cocok sehingga setelah konfigurasi harus menunggu beberapa saat agar setiap router mendapat semua alamat IP yang ada.
+
+
+Kesimpulan 
+- Static routing : Rute yang dilalui oleh paket data ditentukan secara manual oleh administrator jaringan
+- Dynamic routing : Administrator jaringan tidak menentukan rute yang harus ditempuh oleh paket-paket yang akan dikirim, melainkan hanya menentukan bagaimana cara router mempelajari paket, dan kemudian router mempelajarinya sendiri.
