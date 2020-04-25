@@ -1,0 +1,29 @@
+untuk menampilkan routing protocol apa yang dipakai.
+command :
+R1#show ip protocols
+
+contoh :
+Routing Protocol is "rip"
+Sending updates every 30 seconds, next due in 12 seconds
+Invalid after 180 seconds, hold down 180, flushed after 240
+Outgoing update filter list for all interfaces is not set
+Incoming update filter list for all interfaces is not set
+Redistributing: rip
+Default version control: send version 2, receive 2
+  Interface             Send  Recv  Triggered RIP  Key-chain
+  GigabitEthernet0/0    2     2     
+  GigabitEthernet0/1    2     2     
+Automatic network summarization is in effect
+Maximum path: 4
+Routing for Networks:
+	12.0.0.0
+	192.168.1.0
+Passive Interface(s):
+Routing Information Sources:
+	Gateway         Distance      Last Update
+	12.12.12.2           120      00:00:10
+Distance: (default is 120)
+Router#
+
+ketarangan :
+berarti dia pakaii routing protocol RIP
