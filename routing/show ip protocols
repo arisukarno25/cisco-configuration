@@ -26,4 +26,5 @@ Distance: (default is 120)
 Router#
 
 ketarangan :
-berarti dia pakaii routing protocol RIP
+- berarti dia pakaii routing protocol RIP
+- Berdasarkan output routing information di R1, kita bisa lihat bahwa R1 menggunakan RIP version 2 untuk network 12.0.0.0 dan 192.168.1.0. RIP memiliki Administrative Distance (AD) 120. Terdapat 2 interface yang mengaktifkan RIP yaitu g0/0 dan g0/1
