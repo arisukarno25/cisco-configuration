@@ -1,0 +1,11 @@
+debug digunakan untuk mengetahui apakah routing protocol sudah berjalan atau belum.
+commnand :
+R1#debug ip rip
+
+hasil :
+RIP protocol debugging is on
+
+keterangan : 
+- pada contoh diatas menggunakan protocol rip
+- debug ini akan berjalan secara terus menerus untuk update routing protocol,
+maka harus dihentikan dengan peritah : undebug ip rip atau undebug all
