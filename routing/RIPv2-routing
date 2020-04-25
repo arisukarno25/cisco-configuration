@@ -18,8 +18,9 @@ Router(config-router)# network <Network ID>
 Router(config-router)# no auto-summary
 
 Keterangan :
-network <Network-ID> : untuk advertise network yang terhubung langsung dengan router
+- network <Network-ID> : untuk advertise network yang terhubung langsung dengan router
 (directly connected network).
+- perintah "no auto-summary"  digunakan untuk menghemat routing table sehingga akan mengurangi beban proses CPU router (meng summary / meringkas IP nya).
 
 Keuntungan RIPv2
 - Mudah dikonfigurasi
