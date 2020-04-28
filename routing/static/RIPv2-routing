@@ -18,8 +18,9 @@ Router(config-router)# network <Network ID>
 Router(config-router)# no auto-summary
 
 Keterangan :
-- network <Network-ID> : untuk advertise network yang terhubung langsung dengan router
-(directly connected network).
+- network : untuk advertise/iklankan network yang terhubung langsung dengan route (directly connected network).
+- Apabila kita menggunakan network yang tidak terhubung secara langsung dengan router, maka routing RIP tidak akan mengadvertise network yang dimasukkan. 
+- <Network-ID> merupakan alamat/ip address yang akan kita advertise. Maksdunya adalah agar advertise network berfungsi, maka kita harus mendaftarkan dengan router yang terhubung langsung dengan router tersebut. 
 - perintah "no auto-summary"  digunakan untuk menghemat routing table sehingga akan mengurangi beban proses CPU router (meng summary / meringkas IP nya).
 
 Keuntungan RIPv2
