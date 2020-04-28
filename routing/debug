@@ -1,11 +1,25 @@
-debug digunakan untuk mengetahui apakah routing protocol sudah berjalan atau belum.
+- debug digunakan untuk mengetahui apakah routing protocol sudah berjalan atau belum.
+- dengan debug juga kita dapat mengetahui jalannya pengiriman paket ke neighbour.
 commnand :
 R1#debug ip rip
 
 hasil :
+R1#debug ip rip
 RIP protocol debugging is on
+R1#
+RIP: received v2 update from 12.12.12.2 on FastEthernet1/0
+172.16.3.0/24 via 0.0.0.0 in 1 hops
+172.16.4.0/24 via 0.0.0.0 in 1 hops
+192.168.2.0/24 via 0.0.0.0 in 1 hops
+RIP: sending v2 update to 224.0.0.9 via FastEthernet1/0 (12.12.12.1)
+RIP: build update entries
+172.16.1.0/24 via 0.0.0.0, metric 1, tag 0
+172.16.2.0/24 via 0.0.0.0, metric 1, tag 0
+192.168.1.0/24 via 0.0.0.0, metric 1, tag 0
+RIP: sending v2 update to 224.0.0.9 via Loopback1 (172.16.1.1)
 
 keterangan : 
 - pada contoh diatas menggunakan protocol rip
+- RIP menerima update dr next-hop 12.12.12.2 in fa1/0 dengan IP address neighbour 172.16.3.0/24, 172.16.4.0/24, 192.168.2.0/24
 - debug ini akan berjalan secara terus menerus untuk update routing protocol,
 maka harus dihentikan dengan peritah : undebug ip rip atau undebug all
