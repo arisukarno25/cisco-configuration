@@ -1,0 +1,14 @@
+untuk mengetahui neighbour eigrp pada router.
+command :
+R1#show ip eigrp neighbors
+
+hasil :
+R1#show ip eigrp neighbors 
+IP-EIGRP neighbors for process 100
+H   Address         Interface      Hold Uptime    SRTT   RTO   Q   Seq
+                                   (sec)          (ms)        Cnt  Num
+0   10.10.10.1      Gig0/0/1       10   00:27:35  40     1000  0   12
+
+keterangan :
+- Dapat dilihat eigrp menggunakan ASN 100
+- Neighbour eigrp adalah 10.10.10.1 pada interface g0/0/1
