@@ -1,0 +1,20 @@
+1. Successor
+Istilah yang digunakan untuk jalur yang digunakan untuk meneruskan paket data.
+
+2. Feasible Successor
+Istilah yang digunakan untuk jalur yang akan digunakan untuk meneruskan data apabila successor mengalami kerusakan.
+
+3. Feasible Distance
+Istilah yang digunakan untuk jarak dari satu router ke router yang dituju.
+
+4. Advertised Distance
+Istilah yang digunakan untuk jarak dari given neighbor  ke router yang dituju.
+
+5. Neighbor table
+Istilah yang digunakan untuk table yang berisi alamat dan interface untuk mengakses ke router sebelah.
+
+6. Topology table
+Istilah yang digunakan untuk table yang berisi semua tujuan dari router sekitarnya.
+
+7. Reliable Transport Protocol
+EIGRP dapat menjamin urutan pengiriman data.
