@@ -1,0 +1,38 @@
+command :
+R1#debug eigrp packets 
+hasil :
+EIGRP Packets debugging is on
+    (UPDATE, REQUEST, QUERY, REPLY, HELLO, ACK )
+R1#
+EIGRP: Sending HELLO on GigabitEthernet0/0/0
+  AS 100, Flags 0x0, Seq 8/0 idbQ 0/0 iidbQ un/rely 0/0
+
+EIGRP: Received HELLO on GigabitEthernet0/0/1 nbr 10.10.10.1
+  AS 100, Flags 0x0, Seq 14/0 idbQ 0/0
+
+EIGRP: Sending HELLO on Loopback1
+  AS 100, Flags 0x0, Seq 8/0 idbQ 0/0 iidbQ un/rely 0/0
+
+EIGRP: Received HELLO on Loopback1 nbr 172.16.1.1
+  AS 100, Flags 0x0, Seq 8/0 idbQ 0/0
+
+EIGRP: Packet from ourselves ignored
+
+EIGRP: Sending HELLO on GigabitEthernet0/0/1
+  AS 100, Flags 0x0, Seq 8/0 idbQ 0/0 iidbQ un/rely 0/0
+
+EIGRP: Sending HELLO on Loopback2
+  AS 100, Flags 0x0, Seq 8/0 idbQ 0/0 iidbQ un/rely 0/0
+
+EIGRP: Received HELLO on Loopback2 nbr 172.16.2.2
+  AS 100, Flags 0x0, Seq 8/0 idbQ 0/0
+
+dst...
+
+keterangan :
+- terlihat eigpr mengirimkan paket hello ke ip yang sudah terhubung
+- Routing Eigrp akan mengirimkan hello packet setiap 5 detik dengan dead interval 15 detik
+
+untuk menghentikan debug 
+command :
+R1#no debug eigrp packets 
