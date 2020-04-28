@@ -1,0 +1,76 @@
+A. Menampilkan topology eigrp
+command :
+R1#show ip eigrp topology
+
+hasil :
+R1#show ip eigrp topology 
+IP-EIGRP Topology Table for AS 100/ID(172.16.2.2)
+
+Codes: P - Passive, A - Active, U - Update, Q - Query, R - Reply,
+       r - Reply status
+
+P 10.10.10.0/24, 1 successors, FD is 2816
+         via Connected, GigabitEthernet0/0/1
+P 172.16.1.0/24, 1 successors, FD is 128256
+         via Connected, Loopback1
+P 172.16.2.0/24, 1 successors, FD is 128256
+         via Connected, Loopback2
+P 172.16.3.0/24, 1 successors, FD is 130816
+         via 10.10.10.1 (130816/128256), GigabitEthernet0/0/1
+P 172.16.4.0/24, 1 successors, FD is 130816
+         via 10.10.10.1 (130816/128256), GigabitEthernet0/0/1
+P 192.168.1.0/24, 1 successors, FD is 5120
+         via Connected, GigabitEthernet0/0/0
+P 192.168.2.0/24, 1 successors, FD is 5376
+         via 10.10.10.1 (5376/5120), GigabitEthernet0/0/1
+
+keterangan :
+- Akan terlihat bbrp ip yang terkoneksi oleh eigrp
+- menggunakan AS 100
+
+B. Informasi routing eigrp
+command :
+R1#show ip protocols
+hasil :
+R1#show ip protocols 
+Routing Protocol is "eigrp  100 " 
+  Outgoing update filter list for all interfaces is not set 
+  Incoming update filter list for all interfaces is not set 
+  Default networks flagged in outgoing updates  
+  Default networks accepted from incoming updates 
+  EIGRP metric weight K1=1, K2=0, K3=1, K4=0, K5=0
+  EIGRP maximum hopcount 100
+  EIGRP maximum metric variance 1
+Redistributing: eigrp 100
+  Automatic network summarization is not in effect  
+  Maximum path: 4
+  Routing for Networks:  
+     10.0.0.0
+     192.168.1.0
+     172.16.0.0
+  Routing Information Sources:  
+    Gateway         Distance      Last Update 
+    10.10.10.1      90            406336     
+  Distance: internal 90 external 170
+
+keterangan :
+- terlihat menggunakan ASN 100 untuk network 10.0.0.0, 192.168.1.0, 172.16.0.0
+- EIGRP memiliki Administrative Distance 120 
+- Secara default hop-count EIGRP 100.
+
+C. Menampilkan interface eigrp
+command :
+R1#show ip eigrp interfaces
+hasil :
+R1#show ip eigrp interfaces 
+IP-EIGRP interfaces for process 100
+
+                        Xmit Queue   Mean   Pacing Time   Multicast    Pending
+Interface        Peers  Un/Reliable  SRTT   Un/Reliable   Flow Timer   Routes
+Gig0/0/1           1        0/0      1236       0/10           0           0
+Gig0/0/0           0        0/0      1236       0/10           0           0
+Lo1                0        0/0      1236       0/10           0           0
+Lo2                0        0/0      1236       0/10           0          
+
+keterangan :
+- terlihat eigrp menggunakan interface g0/0/1, g0/0/0, lo1 dan lo2
