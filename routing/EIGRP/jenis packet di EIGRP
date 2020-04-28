@@ -1,0 +1,13 @@
+1. Hello Packet 
+biasa…packet ini untuk ngecek keberadaan router tetangga dan untuk membentuk neighborship
+2. Update Packet
+ini yang membedakan dari RIP, EIGRP akan mengirim update JIKA MEMANG ADA UPDAT
+3. Ack Packet
+Acknowledge…dikirimkan oleh router penerima update packet untuk kirim balik ke si pengirim. “paket sudah saya terima…trims makaseee“
+4. Query
+ini juga yang membedakan dari RIP dan routing lain…ketika suatu network putus…router akan minta “tolong” ke router2 lain…”tolong donk cariin jalan yang lain”
+5. Reply
+setelah query diterima..router2 lain yang mempunyai “rute lebih baik” akan me-reply (Query dan Reply akan banyak dibahas di CCNP)
+
+
+
