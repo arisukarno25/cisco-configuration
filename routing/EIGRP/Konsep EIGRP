@@ -1,0 +1,65 @@
+Konsep Dasar
+- EIGRP (Enhanced Interior Gateway Routing Protocol ) disebut juga sebagai routing protocol distance vector, terkadang disebut juga advanced distance vector atau routing protocol hybrid.
+- Routing Protocol Distance Vector menggunakan "jarak" dalam pemilihan routing
+- Distance Vector mengenal apa yang dimaksud dengan hop yaitu lompatan packet yang akan dikirimkan ke sebuah router.
+- Semakin sedikit jumlah hop pada sebuah routing, maka jalur tersebutlah yang akan digunakan untuk dilewati sebuah packet. 
+- Dalam melakukan update routing table, Eigrp akan mengirimkan hello packet setiap 5 detik dengan dead interval 15 detik dalam melakukan update routing table.
+- Hello packet dikirimkan kepada Eigrp neighbor router.
+- EIGRP hanya bisa berjalan atau melakukan routing di perangkat CISCO saja jadi jika terhubung dengan perangkat lain maka routing tersebut tidak berjalan
+- EIGRP ini sangat cocok digunakan utk midsize dan large company
+
+Berikut ini beberapa fitur dari EIGRP :
+- Cisco open standar protocol (sebelumnya proprietary)
+- Termasuk classless routing protocol (mendukung subnetmask selain 255.255.255.0 alias /24, misal 255.255.0.0 /16 dan 255.0.0.0 alias /8 )
+- Update perubahan topologi secara dinamis
+- Metric (32 bit) : Composite Metric (BW + Delay + Load + MTU + Reliability)
+- Administrative Distance: 90
+- Update menggunakan multicast: 224.0.0.10
+- Jumlah maksimum hop count: 255 (default 100)
+- Mendukung protocol IP, IPX, Apple Talk
+- Hello packet dikirim setiap 5 second (dead interval 15 second)
+- Konvergensi cepat
+- Menggunakan algoritma DUAL (Diffusing Update Algorithm) untuk menghitung jalur terpendek
+- Mendukung equal dan unequal cost load balancing
+
+EIGRP memaintain tiga tabel
+1. Neighbor table
+- Menampilkan informasi directly connected router
+- Command: show ip eigrp neighbor
+2. Topology table
+- Menampilkan semua best route yang dipelajari dari masing-masing neighbor
+- Command: show ip eigrp topology
+3. Routing table
+- Menampilkan best route menuju network destination
+- Command: show ip route
+
+Notes EIGRP
+- EIGRP menggunakan autonomous system number (ASN) untuk mengidentifikasi routerrouter
+yang sharing informasi route
+- Hanya router yang memiliki ASN sama yang bisa sharing informasi route
+
+Dua step menggunakan routing protocol dinamis secara umum:
+1. Pilih routing protocol
+2. Advertise directly connected network (jaringan yang terhubung langsung dengan router)
+
+Konfigurasi EIGRP
+Router(config)# router eigrp ASN
+Router(config-router)# network <Network ID>
+Router(config-router)# no auto-summary
+atau
+Router(config)# router eigrp ASN
+Router(config-router)# network <Network ID> <Wildcard Mask>
+Router(config-router)# no auto-summary
+
+Keterangan :
+- ASN atau Auonomous System Number adalah sebuah identity dari router eigrp. 
+- Router eigrp hanya dapat berkomunikasi dengan router eigrp lain apabila memilik ASN yang sama.
+
+Keterangan :
+- bisa diikuti dengan wilcard mask atau tidak
+- network <Network-ID> : untuk advertise network yang terhubung langsung dengan router
+
+Keuntungan EIGRP
+- Terdapat backup route jika best route down (successor=primary, feasible
+successor=backup)
+- Mendukung VLSM
