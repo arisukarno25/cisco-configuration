@@ -42,23 +42,6 @@ Dua step menggunakan routing protocol dinamis secara umum:
 1. Pilih routing protocol
 2. Advertise directly connected network (jaringan yang terhubung langsung dengan router)
 
-Konfigurasi EIGRP
-Router(config)# router eigrp ASN
-Router(config-router)# network <Network ID>
-Router(config-router)# no auto-summary
-atau
-Router(config)# router eigrp ASN
-Router(config-router)# network <Network ID> <Wildcard Mask>
-Router(config-router)# no auto-summary
-
-Keterangan :
-- ASN atau Auonomous System Number adalah sebuah identity dari router eigrp. 
-- Router eigrp hanya dapat berkomunikasi dengan router eigrp lain apabila memilik ASN yang sama.
-
-Keterangan :
-- bisa diikuti dengan wilcard mask atau tidak
-- network <Network-ID> : untuk advertise network yang terhubung langsung dengan router
-
 Keuntungan EIGRP
 - Terdapat backup route jika best route down (successor=primary, feasible
 successor=backup)
