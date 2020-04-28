@@ -1,0 +1,13 @@
+Konsep dasar :
+- Passive Interface merupakan suatu konfigurasi yang memungkinkan sebuah router tidak akan menerima ataupun mengirimkan hello packet ke router lainnya berdasarkan interface yang dipilih
+- Passive interface akan mencegah update incoming/outgoing packet sehingga routing table tidak akan di update kembali. 
+- Dari output debug packet EIGRP, kita bisa lihat bahwa EIGRP menggunakan paket hello untuk membentuk relationship dengan router tetangga (adjacent router). 
+- Apabila kita mengaktifkan command passive-interface di interface maka akan menghentikan pengiriman paket hello sehingga akan mencegah update routing outgoing dan incoming.
+
+command :
+R1(config)#router eigrp 100
+R1(config-router)#passive-interface fa0/0(contoh)
+R1(config-router)#
+
+keterangan 
+- dari contoh maka Router akan mencegah incoming/outgoing packet dari interface fa0/0. 
