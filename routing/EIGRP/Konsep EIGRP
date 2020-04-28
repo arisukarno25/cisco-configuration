@@ -10,7 +10,7 @@ Konsep Dasar
 
 Berikut ini beberapa fitur dari EIGRP :
 - Cisco open standar protocol (sebelumnya proprietary)
-- Termasuk classless routing protocol (mendukung subnetmask selain 255.255.255.0 alias /24, misal 255.255.0.0 /16 dan 255.0.0.0 alias /8 )
+- Termasuk classless routing protocol ( dulu ada IGRP yang hanya mendukung classfull /8,/16,/24 tapi  di EIGRP bisa mendukung subnetmask apa saja/classless)
 - Update perubahan topologi secara dinamis
 - Metric (32 bit) : Composite Metric (BW + Delay + Load + MTU + Reliability)
 - Administrative Distance: 90
