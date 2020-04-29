@@ -1,0 +1,42 @@
+Perintah untuk menampilkan neighbour ospf
+command :
+R1#show ip ospf neighbor
+
+contoh 
+R1#show ip ospf neighbor 
+Neighbor ID     Pri   State           Dead Time   Address         Interface
+1.1.1.1           1   FULL/BDR        00:00:33    10.10.10.1      GigabitEthernet0/0/1
+R1#
+
+Keterangan 
+- neighbour ID : 1.1.1.1 merupkan router ID adjecent(tetangga)
+- dengan address 10.10.10.1 merupakan default gateway pada router tetangga dengan ID 1.1.1.1
+
+Menampilkan informasi routing protokol
+command :
+R1#show ip protocol
+
+hasil :
+Routing Protocol is "ospf 1"
+Outgoing update filter list for all interfaces is not set
+Incoming update filter list for all interfaces is not set
+Router ID 172.16.2.2
+Number of areas in this router is 1. 1 normal 0 stub 0 nssa
+Maximum path: 4
+Routing for Networks:
+12.12.12.0 0.0.0.255 area 0
+172.16.1.0 0.0.0.255 area 0
+172.16.2.0 0.0.0.255 area 0 
+192.168.1.0 0.0.0.255 area 0
+Routing Information Sources:
+Gateway Distance Last Update
+172.16.2.2 110 00:07:22
+172.16.4.4 110 00:06:07
+Distance: (default is 110)
+R1#
+
+keterangan :
+- terdapat routing protocol ospd dengan ID 1
+- Router ID adalah 172.16.2.2
+- Dengan network yang telah di routing adalah 12.12.12.0
+- default distance adalah 11o
