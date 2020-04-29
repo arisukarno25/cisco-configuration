@@ -1,0 +1,13 @@
+Konsep
+Wildcard mask merupakan kebalikan dari subnet mask/inverse subnet-mask.
+
+contoh :
+Keblikan dari subnet mask 255.255.255.252 adalah 0.0.0.3.
+Untuk menghitung kebalikan dari subnet mask, kurangi subnet mask dari 255.255.255.255 sebagai berikut :
+
+255.255.255.255
+
+255.255.255.252
+
+0  .  0  .  0  .  3
+
