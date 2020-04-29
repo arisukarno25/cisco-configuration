@@ -1,3 +1,6 @@
+Pra konfigurasi 
+- sebelum melakukan configurasi routing ospf, cek routing table pada router untuk mengetahui routing yang ada dan mengetahui network directly connected
+
 Konfigurasi OSPF
 Router(config)# router ospf <process-id>
 Router(config-router)# network <network-id> <wildcard-mask> area <area-id>
@@ -6,4 +9,5 @@ Router(config-router)# network <network-id> <wildcard-mask> area <area-id>
 Keterangan :
 - network <Network-ID> : untuk advertise network yang terhubung langsung dengan router (directly connected network).
 - wildcard-mask : inverse subnet-mask
-
+- <process-id> (digunakan untuk identitas routing ospf saja)
+- area <area-id> (ini digunakan untuk menentukan dimana area yang di berikan routing ospf)
