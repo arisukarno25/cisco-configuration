@@ -4,6 +4,10 @@ Konsep dasar :
 - Dari output debug packet EIGRP, kita bisa lihat bahwa EIGRP menggunakan paket hello untuk membentuk relationship dengan router tetangga (adjacent router). 
 - Apabila kita mengaktifkan command passive-interface di interface maka akan menghentikan pengiriman paket hello sehingga akan mencegah update routing outgoing dan incoming.
 
+Ada dua alasan utama untuk memungkinkan perintah passive-interface:
+- Untuk menekan lalu-lintas update yang tidak perlu, seperti ketika sebuah interface adalah interface LAN, dengan tidak terhubung ke router yang lain.
+- Untuk meningkatkan kontrol keamanan, seperti mencegah perangkat routing yang tidak dikenal saat EIGRP update.
+
 command :
 R1(config)#router eigrp 100
 R1(config-router)#passive-interface fa0/0(contoh)
