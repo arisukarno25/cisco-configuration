@@ -1,0 +1,52 @@
+Konsep Dasar
+- OSPF singkatan dari Open Shortest Path First
+- OSPF merupakan routing protocol open standar yang diimplementasikan oleh berbagai macam vendor, termasuk Cisco
+- Link-state protocol
+- OSPF bekerja dengan menggunakan algoritma Dijkstra
+- Hop count unlimited
+- Metric: cost (cost=10^8 / BW)
+- Administrative Distance: 110
+- Classless routing protocol
+- Mendukung VLSM dan CIDR
+- Hanya mendukung equal cost load balancing
+- Terdapat konsep area untuk memudahkan manajemen dan control traffic
+- Menyediakan design hierarki dengan multiple area
+- Harus memiliki satu area yang disebut sebagai area 0 atau backbone area
+- Semua area selain 0 (non-backbone area) harus terhubung ke area 0
+- Dari scalabilitas lebih baik dibandingkan dengan protocol distance vector
+- Mendukung autentikasi
+- Update melalui multicast address: 224.0.0.5
+- Konvergensi cepat
+- Mengirimkan hello packet setiap 10 second
+- Trigger/Incrementeal updates
+- Router mengirimkan update hanya jika terjadi perubahan dan tidak mengirimkan semua routing table pada periodic update
+
+OSPF memaintain tiga tabel
+1. Neighbor table
+- Dikenal juga sebagai adjacency database
+- Menampilkan informasi directly connected router (neighbors)
+- Command: show ip ospf neighbor
+2. Database table
+- Disebut juga sebagai LSDB (link state database)
+- Menampilkan semua kemungkinan informasi route menuju network dalam satu area
+- Command: show ip ospf database
+3. Routing table
+- Menampilkan best route menuju network destination
+- Command: show ip route
+
+Dua step menggunakan routing protocol dinamis secara umum:
+1. Pilih routing protocol
+2. Advertise directly connected network (jaringan yang terhubung langsung dengan router)
+
+Keuntungan OSPF
+- Open standard
+- Tidak ada batasan jumlah hop
+- Loop free
+- Konvergensi lebih cepat 
+
+Kerugian OSPF
+- Mengkonsumsi lebih banyak resource CPU
+- Kompleks dalam hal design dan implementasi
+- Hanya mendukung equal load balancing
+- Hanya mendukung protocol IP
+
