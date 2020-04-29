@@ -1,0 +1,24 @@
+mengetahui database sangat penting untuk mengetahui informasi seputar routing ospf meliputi :
+- Router ID 
+- konfigurasi routing ospf dengan ID 
+
+command :
+R1#show ip ospf database
+
+hasil :
+R1#show ip ospf database 
+            OSPF Router with ID (2.2.2.2) (Process ID 1)
+
+                Router Link States (Area 0)
+
+Link ID         ADV Router      Age         Seq#       Checksum Link count
+2.2.2.2         2.2.2.2         1270        0x80000007 0x00fbe8 4
+1.1.1.1         1.1.1.1         1270        0x80000006 0x009356 4
+
+                Net Link States (Area 0)
+Link ID         ADV Router      Age         Seq#       Checksum
+10.10.10.2      2.2.2.2         1270        0x80000002 0x007d24
+
+keterangan :
+- pada router link state terdapat 2 router ID 
+- link ID (10.10.10.2) merupakan gateway pada router tetangga dengan router ID 2.2.2.2
