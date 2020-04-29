@@ -1,0 +1,9 @@
+Konfigurasi OSPF
+Router(config)# router ospf <process-id>
+Router(config-router)# network <network-id> <wildcard-mask> area <area-id>
+Router(config-router)# network <network-id> <wildcard-mask> area <area-id>
+
+Keterangan :
+- network <Network-ID> : untuk advertise network yang terhubung langsung dengan router (directly connected network).
+- wildcard-mask : inverse subnet-mask
+
