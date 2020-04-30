@@ -1,5 +1,5 @@
 Konsep Dasar
--  OSPF merupakan protokol routing yang menggunakan algoritma linkstate untuk membangun dan mengitung jalur terbaik ke semua tujuan yang diketahui.
+- OSPF merupakan protokol routing yang menggunakan algoritma linkstate untuk membangun dan mengitung jalur terbaik ke semua tujuan yang diketahui.
 - Algoritmalink-state juga dikenal dengan algoritma dijkstra atau algoritma shortest path first (SPF).
 - Algoritmadijkstra diterapkan dalam protokol OSPF untuk memilih rute terbaik yang harus ditempuh olehsuatu paket data dari suatu alamat asal agar sampai di alamat tujuan dengan nilai satuan beban (costmetric) terkecil.
 - Dalam teori graf, algoritma dijkstra dimanfaatkan untuk memilih lintasanterpendek antara dua simpul dari suatu graf yang merupakan representasi topologi jaringan
@@ -12,9 +12,9 @@ Konsep Dasar
 - Administrative Distance: 110
 - Classless routing protocol
 - Mendukung VLSM dan CIDR
-- Hanya mendukung equal cost load balancing
+- Hanya mendukung equal cost load balancing ( artinya setiap node akan diperhitungkan berapa jumlah cost yang dibutuhkan untuk mencapai node tujuan)
 - Terdapat konsep area untuk memudahkan manajemen dan control traffic
-- Menyediakan design hierarki dengan multiple area
+- Menyediakan design hierarki dengan multiple area (artinya OSPF membagi-bagi jaringan menjadi beberapa tingkatan. Tingkatan-tingkatan ini diwujudkan dengan menggunakan sistem pengelompokan area dan harus memiliki satu area yang disebut sebagai area 0 atau backbone area. Semua area selain area 0 (non-backbone area) harus terhubung ke area 0)
 - Harus memiliki satu area yang disebut sebagai area 0 atau backbone area
 - Semua area selain 0 (non-backbone area) harus terhubung ke area 0
 - Dari scalabilitas lebih baik dibandingkan dengan protocol distance vector
