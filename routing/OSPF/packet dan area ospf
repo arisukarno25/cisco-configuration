@@ -1,0 +1,17 @@
+Selama melakukan Routing atau melakukan kerjanya, OSPF memiliki 5 paket yang terus bekerja agar Routing dapat bekerja, yaitu:
+- Hello yang digunakan untuk berkomunikasi dengan neighbor yang terhubung langsung (directly connected)
+- Database Descriptor (DBD) yang berisi daftar router ID dari router dimana LSA diterima dan sequence number
+- Link State Request (LSR) untuk Permintaan LSA
+- Link State Update (LSU) untuk Reply dari LSR yang berisi informasi yang diminta
+- Link State Acknowledgment (LSAck) yang digunakan untuk mengkonfirmasi bahwa link-state information sudah diterima
+
+Area pada OSPF
+Area pada OSPF mengacu pada sekumpulan router yang memiliki area ID yang sama Network. Network OSPF harus memiliki area khusus yang disebut area 0 atau Backbone Area dan area lainnya harus terhubung dengan area 0, 
+maka dari itu area 0 harus memiliki bandwidth yang besar sehingga bisa melayani traffic area yang lain. Beberapa area yang ada dalam OSPF:
+- Standar Area adalah area standar yang digunakan oleh OSPF. Area ini dapat menerima link update intra-area, route summaries, interarea dan rute external
+- Backbone Area adalah pusat dari OSPF, dimana semua area akan terkoneksi langsung pada area ini. Area ini akan selalu diberi label area 0. Pertukaran informasi routing network terjadi pada area ini
+- Stub Area disebut ujung dari Network. Database nya berisi rute network internal dan sebuah rute default
+- Totally Stub Area adalah area yang mirip dengan Stub Area. Database nya berisi rute untuk area sendiri dan sebuah rute default
+- Not-So-Stubby-Area (NSSA) adalah area yang database nya berisi rute internal dan sebuah optional rute default. Rute-rute didistribusikan ulang dari sebuah proses routing yang terkoneksi
+- Totally NSSA adalah Area yang hanya didesain untuk perangkat Cisco
+
