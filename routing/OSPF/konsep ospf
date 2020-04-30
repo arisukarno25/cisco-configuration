@@ -1,4 +1,8 @@
 Konsep Dasar
+-  OSPF merupakan protokol routing yang menggunakan algoritma linkstate untuk membangun dan mengitung jalur terbaik ke semua tujuan yang diketahui.
+- Algoritmalink-state juga dikenal dengan algoritma dijkstra atau algoritma shortest path first (SPF).
+- Algoritmadijkstra diterapkan dalam protokol OSPF untuk memilih rute terbaik yang harus ditempuh olehsuatu paket data dari suatu alamat asal agar sampai di alamat tujuan dengan nilai satuan beban (costmetric) terkecil.
+- Dalam teori graf, algoritma dijkstra dimanfaatkan untuk memilih lintasanterpendek antara dua simpul dari suatu graf yang merupakan representasi topologi jaringan
 - OSPF singkatan dari Open Shortest Path First
 - OSPF merupakan routing protocol open standar yang diimplementasikan oleh berbagai macam vendor, termasuk Cisco
 - Link-state protocol
