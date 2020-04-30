@@ -1,0 +1,27 @@
+Konsep :
+- Passive-interface OSPF memiliki kemiripan dengan EIGRP.
+- Dengan mengaktifkan passiveinterface di interface OSPF, maka akan menghentikan pengiriman paket hello sehingga akan mencegah router membentuk relationship neighbor antar router,
+akibatnya router akan berhenti melakukan update routing outgoing dan incoming (tidak dapat mengirimkan update routing dan tidak dapat dikirimi update routing).
+- OSPF dan EIGRP sama-sama menggunakan paket hello sebelum membentuk relationship antar router.
+- 
+command :
+R1(config)#router ospf <router ID>
+R1(config-router)#passive-interface <interface>
+R1(config-router)#
+
+command untuk cek 
+R1#show ip ospf interface
+
+contoh :
+FastEthernet0/0 is up, line protocol is up
+No Hellos (Passive interface)
+
+FastEthernet1/0 is up, line protocol is up
+Hello due in 00:00:07
+
+- pada fa1/0 telah di aktifakan passive-interface jadi tidak bisa menerima/mengirim paket hello
+
+kasus 
+contoh kasus misal ada Network A dan Network B dalam LAN maka mengaktifkan passive interface
+pada inerface network host maka tidak jadi masalah, namun ketika mengaktifkan passive interface 
+pada interface network router maka akan jadi masalah yaitu R1 tidak dapat membentuk relationship dengan R2, sehingga OSPF tidak dapat berjalan normal.
