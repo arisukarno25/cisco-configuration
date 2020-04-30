@@ -1,0 +1,30 @@
+saat kita melihat table routing hasil ospdf 
+command :
+R1#show ip ospf interface atau
+R1#sho ip route
+
+maka terlihat
+
+..
+..
+O 172.16.3.3/32 [110/2] via 12.12.12.2, 00:38:50, FastEthernet1/0
+O 172.16.4.4/32 [110/2] via 12.12.12.2, 00:38:50, FastEthernet1/0
+O 172.16.1.1/32 [110/2] via 12.12.12.1, 00:41:42, FastEthernet1/0
+O 172.16.2.2/32 [110/2] via 12.12.12.1, 00:41:42, FastEthernet1/0
+R1#
+
+Keterangan :
+- Terlihat bahwa loopback yang sebelumnya kita buat untuk tujuan imitasi subnet atau testing menjadi sebuah network sendiri di R1 maupun di R2 berubah menjadi stub host dengan prefix /32 dan network type LOOPBACK. 
+- Semua loopback, yaitu Loopback1, Loopback2, Loopback3, Loopback4 menjadi stub host dengan network type LOOPBACK.
+- Stub host memang tampil di routing table dengan prefix /32, akan tetapi tidak dapat digunakan untuk forwarding.
+- Agar semua loopback dapat di advertise oleh OSPF sebagai network dengan prefix aslinya yaitu /24, caranya dengan mengubah network type loopback menjadi point-to-point.
+
+command 
+R1(config)#interface lo1
+R1(config-if)#ip ospf network point-to-point
+R1(config-if)#
+R1(config-if)#interface lo2
+R1(config-if)#ip ospf network point-to-point
+R1(config-if)#
+
+setalah menjadi network dan bukan stub host, coba test ping apakah ada jawaban/tidak.
