@@ -1,0 +1,21 @@
+Konsep Dasar
+Dalam jaringan broadcast multiaccess, DR (Designated Router) dan BDR (Backup Designated Router) sangatlah diperlukan. 
+DR dan BDR akan menjadi pusat komunikasi seputar informasi OSPF dalam jaringan tersebut. 
+Semua paket pesan yang ada dalam proses OSPF akan disebarkan oleh DR dan BDR. 
+Maka itu, pemilihan DR dan BDR menjadi proses yang sangat kritikal. 
+Sesuai dengan namanya, BDR merupakan “shadow” dari DR. Yang artinya BDR tidak akan digunakan sampai masalah terjadi pada router DR. 
+Ketika router DR bermasalah, maka kendali langsung diambil oleh router BDR. 
+Sehingga perpindahan kendali akan berlangsung dengan smooth.
+
+Proses pemilihan DR/BDR tidak lepas dari peran penting Hello packet.
+Di dalam Hello packet ada sebuah field berisikan ID dan nilai Priority dari sebuah router.
+Semua router yang ada dalam jaringan broadcast multi-access akan menerima semua Hello dari semua router yang ada dalam jaringan tersebut pada saat kali pertama OSPF berjalan.
+Router dengan nilai Priority tertinggi akan menang dalam pemilihan dan langsung menjadi DR.
+Router dengan nilai Priority di urutan kedua akan dipilih menjadi BDR. 
+Status DR dan BDR ini tidak akan berubah sampai salah satunya tidak dapat berfungsi baik, meskipun ada router lain yang baru bergabung dalam jaringan dengan nilai Priority-nya lebih tinggi.
+Secara default, semua router OSPF akan memiliki nilai Priority 1.
+Range Priority ini adalah mulai dari 0 hingga 255.
+Nilai 0 akan menjamin router tersebut tidak akan menjadi DR atau BDR, sedangkan nilai 255 menjamin sebuah router pasti akan menjadi DR
+Router ID biasanya akan menjadi sebuah “tie breaker” jika nilai Priority-nya sama. 
+Jika dua buah router memiliki nilai Priority yang sama, maka yang menjadi DR dan BDR adalah router dengan nilai router ID tertinggi dalam jaringan. 
+Setelah DR dan BDR terpilih, langkah selanjutnya adalah mengumpulkan seluruh informasi jalur dalam jaringan.
