@@ -1,0 +1,8 @@
+melihat table routing suatu protokol
+
+command :
+R1#show ip route nama_routing_protokol
+
+misal : 
+R1#show ip route ospf
+R1#show ip route rip
