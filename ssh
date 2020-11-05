@@ -8,7 +8,7 @@ Langkah mengaktifkan SSH di router:
 
 command :
 R-1(config)#hostname ..nama_router..
-R-1(config)#username ..username_anda password ..password_anda..
+R-1(config)#username ..username_anda secret ..password_anda..
 R-1(config)#ip domain-name ..domain_anda.. (misal : latihan.com/arisukarno dll)
 R-1(config)#crypto key generate rsa
 
