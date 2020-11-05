@@ -76,4 +76,4 @@ R1(config-router)#
 
 keterangan :
 - contoh di atas adalah int fa0/0 dilakukan passive interface, sehingga jika di cek dengan commnand : show ip protocols , maka akan masuk ke lis "passive interface"
-
+- fa0/0 adalah interface yang menuju network router 1
